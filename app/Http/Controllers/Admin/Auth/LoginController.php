@@ -19,7 +19,7 @@ class LoginController extends Controller
     |
     */
 
-    // use AuthenticatesUsers;
+    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
@@ -40,6 +40,10 @@ class LoginController extends Controller
     }
 
     public function index() {
-        echo "TELA DE LOGIN";
+        return view('admin.login');
+    }
+
+    public function authenticate() {
+        
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -22,7 +22,7 @@ class RegisterController extends Controller
     |
     */
 
-    // use RegistersUsers;
+    use RegistersUsers;
 
     /**
      * Where to redirect users after registration.
@@ -40,6 +40,14 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    public function index() {
+        return view('admin.register');
+    }
+
+    public function register() {
+
     }
 
     /**
